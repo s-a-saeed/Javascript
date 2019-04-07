@@ -1,0 +1,36 @@
+<!--
+https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced
+-->
+
+
+<!DOCTYPE html>
+<head lang="en">
+<title>Task</title>
+</head>
+<body>
+    <script>
+        var sub = prompt("Enter Subject:")
+        
+        doHomeWork = (subject,callback) => {  //This is doHomeWork Function definition
+            document.write(`Doing my ${subject} homework`);
+            callback();
+        }
+    
+        doHomeWork(sub,function(){document.write("<br /> Finished my homework")}); //this is doHomeWork Function call but callback functions don’t always have to be defined in our function call. They can be defined elsewhere in our code. See below example which will have the same result.
+        
+        
+        // var sub = prompt("Enter Subject:")
+        
+        // doHomeWork = (subject,callback_rec) => {  //This is doHomeWork Function definition
+        //     document.write(`Doing my ${subject} homework`);
+        //     callback_rec();
+        // }
+
+        // function callback(){document.write("<br /> Finished my homework")}
+    
+        // doHomeWork(sub, callback);
+
+
+
+    </script>
+</body>
