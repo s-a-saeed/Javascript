@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<head lang="en">
+<title>Task</title>
+</head>
+<body>
+    <script>
+      const funcToExec = () => {console.log("I want to execute this function")}
+    //   console.log("Below is a demo of settimeout function")
+    //   setTimeout(() => funcToExec(), 1000);
+
+    //-------------------------------------------------------------------------
+    //See what will happen here
+    //-------------------------------------------------------------------------
+    console.log("Below is a demo of settimeout function")
+
+    //Whenever JS sees Set Time Out it recognizes it as an asynchronous function and adds it to event Queue instead of executing it
+    setTimeout(() => console.log("I have zero interval set"), 0);
+    
+    //wil execute below as it is part of the main thread after adding the above to event queue
+    console.log("Eventhough above set timeout is set to 0, I will execute first")
+
+    //wil add below to event queue
+    setTimeout(() => console.log("I have 1000 interval set"), 1000);
+    
+    //JS adds everything into the main thread and adds the asynchronous functions to event queue. Then it keeps checking event queue to see if time is up for any setTimeOut and executes if need be
+
+
+    </script>
+</body>

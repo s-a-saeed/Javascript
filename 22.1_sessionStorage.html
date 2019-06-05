@@ -1,0 +1,32 @@
+<!-- 
+sessionStorage is similar to localStorage; the only difference is while data stored in localStorage has no expiration 
+time, data stored in sessionStorage gets cleared when the page session ends.
+A page session lasts for as long as the browser is open and survives over page reloads and restores
+https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage -->
+
+<!DOCTYPE html>
+<head lang="en">
+<title>Task</title>
+</head>
+<body>
+    <script>
+        sessionStorage.setItem("fname", "Atif")
+        sessionStorage.setItem("lname", "Saeed")
+
+        let abc = sessionStorage.getItem("fname")
+
+        console.log(abc)                      //RESULT: Atif
+
+        sessionStorage.removeItem("fname")
+
+        console.log(sessionStorage.getItem("fname"))       //RESULT: NULL will be displyed
+
+        console.log(sessionStorage.key(0))    //RESULT: lname (This value can be different)
+
+        console.log(sessionStorage.length)    //RESULT: 1 (This value can be different)
+
+        sessionStorage.clear()               //this line will remove all the data from session storage
+
+        console.log(sessionStorage.length)    //RESULT: 0 (This value can be different)
+    </script>
+</body>

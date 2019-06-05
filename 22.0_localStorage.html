@@ -1,0 +1,32 @@
+<!-- 
+LocalStorage is a type of web storage that allows Javascript websites and apps to store and access data 
+right in the browser with no expiration date. This means the data stored in the browser will persist even 
+after the browser window has been closed.
+https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36 -->
+
+<!DOCTYPE html>
+<head lang="en">
+<title>Task</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem("fname", "Atif")
+        localStorage.setItem("lname", "Saeed")
+
+        let abc = localStorage.getItem("fname")
+
+        console.log(abc)                    //RESULT: Atif
+
+        localStorage.removeItem("fname")
+
+        console.log(localStorage.getItem("fname"))       //RESULT: NULL will be displyed
+
+        console.log(localStorage.key(0))    //RESULT: Google_experiment_mod (This value can be different).Displays lname it pushes new value
+
+        console.log(localStorage.length)    //RESULT: 4 (This value can be different).Dislays 1 after removing fname
+
+        localStorage.clear()               //this line will remove all the data from local storage
+
+        console.log(localStorage.length)    //RESULT: 0 (This value can be different)
+    </script>
+</body>

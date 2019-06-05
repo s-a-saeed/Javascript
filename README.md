@@ -1,2 +1,0 @@
-# Javascript
-testing of concepts
